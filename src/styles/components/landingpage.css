@@ -1,0 +1,12 @@
+.land{
+    position: absolute;
+    left:10%;
+    right:10%
+}
+
+@media screen and (max-width: 480px)  {
+   .land{
+       left: 2%;
+       right: 2%;
+   }
+}

@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    background: #FFFFFF;
+    padding: 10px 0;
+    align-items: center;
+    
+}
+
+.navbar ul {
+    align-items: center;
+   
+}
+
+
+.navbar ul li {
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: #091E42;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+}
+
+#mlogo {
+    background-color:#0052CC ;
+    display: none;
+}
+
+#menuicon{
+    display: none;
+}
+
+.logo {
+    display: flex;
+    margin:0 20px 0 0;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav button {
+display: flex;
+border: none;
+color: #A5ADBA;
+height: 30px;
+background-color: #FFFFFF;
+flex-direction: row;
+align-items: center;
+padding: 5px 12px;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+text-align: center;
+margin-left: auto;
+
+}
+.btn{
+    margin-left: auto;
+    display: flex;
+    margin-right: 2%;
+}
+#signin {
+    background: #0052CC;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.checkbtn{
+    float: right;
+    display: none;
+
+}
+
+#check{
+    display: none;
+}
+.closebtn{
+    display: none;
+}
+@media screen and (max-width: 600px)  {
+    #wlogo{
+        display: none;
+    }
+    #mlogo{
+        display: block;
+    }
+    .checkbtn{
+        display: block;
+    }
+    
+    .myul{
+        position: fixed;
+        top: 20%;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .myul, .btn{
+        visibility: hidden;
+    }
+    .navbar ul li {
+       display: block; 
+       padding: 10px 0;
+      
+    }
+    .btn {
+        position: fixed;
+        display: block;
+        margin-left: 0;
+        margin-right: 5px;
+        top: 45%;
+        width: 96%;
+        text-align: center;
+        -webkit-transform:  rotate(180deg);
+        transform:  rotate(180deg);
+    }
+    .btn button{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        
+    }
+    .checkbtn,.closebtn{
+        margin-left: auto;
+    }
+    #signup{
+        background: #F4F5F7;
+        
+    }
+    #check:checked ~ .checked {
+        visibility: visible;
+
+    }
+    #check:checked ~ .checkbtn{
+        display: none;
+    }
+    #check:checked ~ .closebtn{
+        display: block;
+    }
+}
+
+  
