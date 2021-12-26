@@ -1,0 +1,65 @@
+.intro{
+    margin-top: 2rem;
+    padding: 0;
+    display: flex;
+    height: 475px;
+   
+}
+
+.writeup{  
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    
+    
+}
+
+.writeup h4{
+    font-size: 40px;
+    text-align: start;
+    font-weight: 700;
+    line-height: 57.6px;
+    color: #091E42;
+}
+.writeup p{
+    margin-top: 1rem;
+    text-align: start;
+    color: #344563;
+
+}
+.intro img{
+ width: 620px;
+ height: 475px ;
+}
+
+@media screen and (max-width:640px){
+    .intro{
+        display: block;
+        margin-top: 4.5rem;
+        
+    }
+    .writeup h4{
+        font-size: 32px;
+        font-weight: 700;
+        line-height:38px;
+        width: 301px;
+        
+    }
+    .writeup p{
+        font-size: 16px;
+        width: 245px;
+        line-height: 20px;
+        color: #344563;
+        font-weight: 450;
+        text-align: start;
+        
+    }
+
+    .intro img{
+        width: 342px;
+        height: 226px;
+        align-content: flex-start;
+    }
+
+
+}
