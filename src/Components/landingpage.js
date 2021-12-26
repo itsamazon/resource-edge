@@ -1,11 +1,15 @@
 import react from "react";
-import NavBar from "./navbar";
+import NavBar from "./NavBar";
+import Intro from "./intro";
 
 const LandingPage = () => {
     return(
-        <div className='land'>
+        <>
         <NavBar />
+        <div className='land'>
+         <Intro />
         </div>
+        </>
     )
 }
 
