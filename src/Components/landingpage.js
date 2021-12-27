@@ -1,6 +1,7 @@
 import react from "react";
 import NavBar from "./NavBar";
 import Intro from "./Intro";
+import Hr from "./Hr";
 
 const LandingPage = () => {
     return(
@@ -8,7 +9,9 @@ const LandingPage = () => {
             <NavBar />
             <div className='land'>
             <Intro />
+            <Hr />
             </div>
+            
         </div>
     )
 }
