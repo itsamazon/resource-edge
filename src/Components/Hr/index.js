@@ -2,7 +2,7 @@ import './style.css'
 import em from '../../images/001-team.svg'
 import pm from '../../images/003-goal.svg'
 import pt from '../../images/006-calendar.svg'
-import direct from '../../images/Direct Reports - List (2).svg'
+import direct from '../../images/Group 19842.svg'
 import card from '../../images/person card.svg'
 
 
@@ -32,7 +32,6 @@ const Hr = () => {
             </div>
             <div className='image'>
                 <img id ='direct' src={direct}/>
-                <img id='lady' src={card}/>
             </div>
         </div>
     )

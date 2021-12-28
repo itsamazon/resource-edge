@@ -1,0 +1,155 @@
+.admin{
+    width: 100%;
+    padding: 4rem 0 4rem 8rem;
+   
+}
+.addtext{
+    display: flex;
+}
+.addL{ 
+    width: 541px;
+    height: 211px;
+    /* background-color: red; */
+}
+
+.addL h1{
+    position: static;
+    width: 516.74px;
+    height: 65px;
+    left: 0px;
+        top: 2.02px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 135%;
+    color: #091E42;
+    transform: rotate(-0.22deg);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+}
+
+.addL p{
+    position: static;
+    width: 430px;
+    height: 48px;
+    left: 0px;
+    top: 99.02px;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E6C84;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 32px 0px;
+}
+/* .travel{
+    background-color: pink;
+} */
+
+#trvl,#assts {
+width: 64px;
+height: 64px;
+border-radius: 50%;
+margin-bottom: 32px;
+}
+
+#trvl{
+    background: #FF8B00;
+}
+#trvl img,#assts img{
+   margin: 15px;
+
+}
+
+.travel h1{
+    width: 202px;
+    height: 32px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #091E42;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.travel p{
+    width: 200px;
+    height: 81px;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5E6C84;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+.assets{
+    margin-left: 88px;
+}
+#assts{
+    background: #008DA6;
+}
+
+.assets h1{
+    width: 224px;
+    height: 32px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #091E42;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.assets p{
+    width: 224px;
+    height: 61px;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5E6C84;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px
+}
+
+#addy{
+    /* position: relative; */
+    width: 885px;
+    height: 521px;
+    background: #FAFBFC;
+    box-shadow: -28px 46px 60px rgba(9, 30, 66, 0.08);
+    margin: 100px 50px 150px 50px;
+}
+
+.second{
+    margin-top: 100pxS;
+}
+.sponsors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 1112.75px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    opacity: 0.7;
+
+}

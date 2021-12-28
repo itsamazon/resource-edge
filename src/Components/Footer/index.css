@@ -1,0 +1,29 @@
+.footer{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #091E42;
+
+}
+
+.foottext h1{
+    height: 23px;
+    width: 143px;
+    font-size: 16px;
+    font-weight: 700;
+    color: red;
+}
+
+.foottext p{
+    width: 276px;
+    height: 26px;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 145%;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
