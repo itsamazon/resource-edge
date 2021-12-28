@@ -4,8 +4,15 @@ import re from "../../images/re.png"
 import menuicon from "../../images/menu-outline.png"
 import close from "../../images/Dropdown/Vector.png"
 import './style.css'
+import Authentication from "../authenticationpage";
+import { useNavigate, Link } from 'react-router-dom';
 
 const NavBar = () => {
+    const loadlogin= () => {
+        return (
+          <Authentication />
+        )
+    }
     
     return(
     <nav className='navbar'>
@@ -20,8 +27,8 @@ const NavBar = () => {
                 <li><a href=''>About</a></li>
             </ul>
             <div className='btn checked'>
-                <button id='signup'>Sign up</button>
-                <button id='signin'>Sign in</button>
+                <Link to="/signup" id='signup'>Sign Up</Link>
+                <Link to="/login" id='signin' >Sign In</Link>
             </div>
      
         
