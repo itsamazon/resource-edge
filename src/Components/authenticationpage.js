@@ -1,7 +1,8 @@
+import Login from "./login"
 const Authentication = () => {
     return (
         <div>
-            hello
+            <Login/>
         </div>
     )
 }
