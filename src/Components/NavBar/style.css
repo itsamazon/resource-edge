@@ -66,10 +66,23 @@ nav button {
     display: flex;
     margin-right: 2%;
 }
+.btn Link{
+    padding: 5px 12px;
+    height: 20px;
+}
 #signin {
     background: #0052CC;
     border-radius: 4px;
     color: #FFFFFF;
+    padding:8px 22px;
+    /* height: 50px; */
+}
+#signup{
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding:8px 22px;
+    color: #A5ADBA;
+    /* height: 50px; */
 }
 
 .checkbtn{
