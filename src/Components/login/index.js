@@ -25,17 +25,15 @@ const Login = (props) => {
             // console.log(props)
             if (result.success) {
                 setIsloading(false);
-                // navigate("/dashboard")
+                navigate("/dashboard")
             }
         })
     }
     const handleChange = (e) => {
-        console.log('hello')
         if(e.target.type === 'email'){
             // console.log('hello')
             const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
             const test = regex.test(e.target.value)
-            console.log(test)
             if(regex.test(e.target.value)){
                 console.log('pass')
                 setemail(e.target.value);
