@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LoginAction } from '../../store/actions/loginActions'
+import { LoginAction } from '../../store/actions/loginAction'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import re from '../../images/reicon.svg'
@@ -10,34 +10,66 @@ import right from '../../images/rightgroup.png'
 import left from '../../images/leftgroup.svg'
 
 
-const Login = () => {
+const Login = (props) => {
     const navigate = useNavigate()
+    const [isValid, setIsValid] = useState(false);
     const [isLoading, setIsloading] = useState(false)
-    const [username, setusername] = useState('')
+    const [email, setemail] = useState('')
     const [password, setPassword] = useState('')
-    const login = (username, password) => {
+    const [progress, setProgress] = useState(0)
+    const login = (email, password) => {
         console.log("login function fired")
         setIsloading(true);
-        let payload = { username: username.toUpperCase(), password: password }
+        let payload = { email: email.toUpperCase(), password: password }
         props.loginAction(payload).then(result => {
             // console.log(props)
             if (result.success) {
                 setIsloading(false);
-                navigate("/dashboard")
+                // navigate("/dashboard")
             }
         })
     }
     const handleChange = (e) => {
-        return (
-            e.target.name === 'username' ? setusername(e.target.value) :
-                e.target.name === 'password' ? setPassword(e.target.value) :
-                    () => { }
-        )
+        console.log('hello')
+        if(e.target.type === 'email'){
+            // console.log('hello')
+            const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
+            const test = regex.test(e.target.value)
+            console.log(test)
+            if(regex.test(e.target.value)){
+                console.log('pass')
+                setemail(e.target.value);
+                setProgress(1)            
+            }
+            ;
+        } else {
+
+            //check length of password
+            if(e.target.value.length < 6) {
+                setIsValid(false)
+            }else {
+                setIsValid(true)
+                setPassword(e.target.value)
+                // setProgress(2)
+                
+            }
+                
+        
+        //  return (
+        //      setProgress(1)
+        // //     e.target.name === 'email' ? setemail(e.target.value) :
+        // //         e.target.name === 'password' ? setPassword(e.target.value) :
+        // //             () => { }
+        // )
     }
+    
+}
+
+    
 
     const handleClick = (e) => {
         e.preventDefault();
-        username.length && password.length && login(username, password);
+        login(email, password);
     }
     return(
         <div className='login'>
@@ -46,13 +78,22 @@ const Login = () => {
                     <img src ={re}/>
                     <img src ={res}/>
                 </div>
+                <div></div>
                 <div className='form'>
                     <h1>Log in</h1>
                     <p>Access your resource edge account</p>
-                    <form>
-                        <label>Email Address:</label>
-                        <input id='email' type="email" name="email" placeholder='Enter email'/>
-                        <input id='submit' type="submit" value="Log in" />
+                    <div id={progress === 0 ? "hidemail": "displaydetail"}>
+                        <p>Supposed Fullname</p>
+                        <sm >{email}</sm>
+                    </div>
+                    <form onSubmit={handleClick}>
+                        <label id={progress === 0 ? null: "hidemail"}>Email Address:</label>
+                        <input id={progress === 0 ? "email" : "hidemail"} type="email" onChange={handleChange} name="email" placeholder='Enter email'/>
+                        <label id={progress === 0 ? "hidepassword": progress === 1 ? null:null}>Password:</label>
+                        <input id={progress === 0 ? "hidepassword": progress === 1 ? "password":null} onChange={handleChange}  type="password" name="password" placeholder='Enter password'/>
+                        { isValid ? <button  id='submit' type="submit"> {isLoading?'Loading': 'Sign in'}</button> :
+                        <button  id='submit' disabled type="submit"></button>}
+                        
                     </form>
                     <div className='forgotpassword'>
                         <Link to=''>Forgot password?</Link>

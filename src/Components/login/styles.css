@@ -11,7 +11,7 @@
     padding: 0px;
     position: absolute;
     width: 480px;
-    height: 526.53px;
+    min-height: 526.53px;
     left: 480px;
     top: 120px;
 }
@@ -30,11 +30,12 @@
 .form{
     display: block;
     width: 480px;
-    height: 421px;
+    min-height: 421px;
     background-color: #FFFFFF;
     box-shadow: 0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31);
     border-radius: 8px;
     z-index: 1000;
+    /* padding-bottom: 40px; */
 }
 
 .login .form h1{
@@ -67,30 +68,56 @@
 
 .login .form form label{
     margin-bottom: 8px;
+    color: #091E42
 }
-.login .form form input {
+.login .form form input,#submit {
     width: 400px;
     height: 40px;
     border: 1px solid #DFE1E6;
     line-height: 20px;
+    border-radius: 4px;
+    color: #091E42
 }
 
 #submit{
     margin-top: 20px;
+    background-color: #0052CC;
+    border: none;
+    
 }
+#displaydetail{
+    margin-left: 150px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 325px;
+    height: 68px;
+}
+#displaydetail p{
+    margin: 0;
+    font-weight:700;
+    color: #172B4D;
+    font-size: 19px;
 
-#email{
+}
+#email,#password{
     padding-left: 10px;
     font-size: 14px;
+    color: #091E42
+}
+#hidemail,#hidepassword{
+    display: none;
 }
 
 .forgotpassword{
     width: 400px;
     margin: 40px;
     padding-top:16px;
+    padding: 20px 0 10px 0;
     border-top:1px solid #DFE1E6 ;
     display: flex;
     justify-content: center;
+    color: #0052CC;
+
 }
 
 .decor{

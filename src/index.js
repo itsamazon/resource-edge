@@ -4,11 +4,23 @@ import AppRoute from './routes/AppRoute';
 import LandingPage from './Components/landingpage';
 import './styles/styles.css'
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import ConfigureStore from './store/configStore';
+
+
+const ProviderComponent = () => {
+  const store = ConfigureStore();
+  return (
+    <Provider store = {store}>
+      <AppRoute/>
+    </Provider>
+  )
+}
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRoute />
+    <ProviderComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
