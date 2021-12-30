@@ -137,6 +137,7 @@ nav{
 /* dropdown section */
 
 .dropdown{
+    display: none;
     position:fixed;
     top:100px;
     left:20px;
@@ -174,6 +175,10 @@ nav{
     font-size: 12px;
     margin-bottom: 17px;
 }
+.dropdown-content .roles{
+    display: flex;
+    flex-direction: column;
+}
 
 .dropdown-content .roles .role{
     display: flex;
@@ -188,9 +193,13 @@ nav{
     color:#344563 ;
 }
 
-.dropdown-content .roles .role input, #check1,#check2 {
+.dropdown-content .roles .role input,#check22 {
     display: none;
 }
+
+/* #check11{
+    display:none;
+} */
 
 .logout{
     padding:20px 0 20px 16px;
