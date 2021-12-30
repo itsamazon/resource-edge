@@ -4,14 +4,30 @@ import menu from '../../images/menu-outline.png'
 import res from '../../images/res.png'
 import tm from '../../images/TM Dashboard.svg'
 import profile from '../../images/picon.svg'
+import Dropdown from './dropdown';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+    const checked = () => {
+        // Get the checkbox
+        let checkBox = document.getElementById("menucheck");
+        // Get the output text
+        let drp = document.getElementById("drpcnt");
+      
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true){
+          drp.style.display = "block";
+        } else {
+          drp.style.display = "none";
+        }
+      }
+
     return(
         <div>
             <nav>
                 <div className='left-content'>
-                <img id='menu' src={menu}/>
+                <label for='menucheck' ><img id='menu' src={menu}/></label>
+                <input type='checkbox' id='menucheck' onClick={checked}/>
                 <img id='res' src={res}/>
                 <img id='tm' src={tm}/>
                 </div>
@@ -19,6 +35,9 @@ const Dashboard = () => {
                 <img id='profile' src={profile}/>
                 </div>
             </nav>
+            <div className='dropdown' id ='drpcnt'>
+            <Dropdown />
+            </div>
             <div className='dash_content'>
                     <h1>Hello, Ositadinma Nwangwu</h1>
                     <p>Welcome and good to have you back.</p>

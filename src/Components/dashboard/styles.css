@@ -129,3 +129,72 @@ nav{
     ;
 
 }
+
+#menucheck{
+    display: none;
+}
+
+/* dropdown section */
+
+.dropdown{
+    position:fixed;
+    top:100px;
+    left:20px;
+    width: 300px;
+    min-height: 264px;
+    /* background-color: red; */
+    z-index: 1000;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 0px 1px rgba(9, 30, 66, 0.31);
+    border-radius: 3px;
+}
+
+.dropdown-content{
+    padding:28px 0 16px 20px;
+}
+
+.dropdown-content h1{
+    line-height: 12px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #6B778C;
+}
+
+.dropdown-content p{
+    line-height: 21px;
+    font-size: 14px;
+    color: #172B4D;
+    margin-bottom: 28px;
+}
+
+.dropdown-content #sm{
+    line-height: 12px;
+    color:  #6B778C;
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+.dropdown-content .roles .role{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.dropdown-content .roles .role label{
+    width: 188px;
+    margin-left: 12px;
+    padding-top: 2px;
+    color:#344563 ;
+}
+
+.dropdown-content .roles .role input, #check1,#check2 {
+    display: none;
+}
+
+.logout{
+    padding:20px 0 20px 16px;
+    border-top: 2px solid #C1C7D0;
+    color: #172B4D;
+}
+
