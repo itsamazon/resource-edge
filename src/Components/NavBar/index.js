@@ -8,12 +8,6 @@ import Authentication from "../authenticationpage";
 import { useNavigate, Link } from 'react-router-dom';
 
 const NavBar = () => {
-    const loadlogin= () => {
-        return (
-          <Authentication />
-        )
-    }
-    
     return(
     <nav className='navbar'>
         <input type='checkbox' id='check'/>

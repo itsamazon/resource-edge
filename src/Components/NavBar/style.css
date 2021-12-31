@@ -2,13 +2,14 @@ nav {
     position: fixed;
     margin-bottom: 1rem;
     z-index: 1000;
+    width: 400px;
 }
 .navbar{
     display: flex;
-    width: 100%;
     background: #FFFFFF;
     padding: 10px 2rem;
     align-items: center;
+    width: 100%
 }
 
 .navbar ul {
@@ -58,7 +59,7 @@ nav button {
     font-weight: 500;
     font-size: 12px;
     text-align: center;
-    margin-left: auto;
+    /* margin-left: auto; */
     box-shadow: 3px 1px whitesmoke;
 }
 .btn{

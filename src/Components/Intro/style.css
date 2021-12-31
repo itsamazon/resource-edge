@@ -1,8 +1,10 @@
 .intro{
-    margin: 2rem 4rem ;
+    /* margin: 2rem 0 2rem 4rem ; */
     padding: 0;
     display: flex;
     height: 475px;
+    min-width: 1423px;
+    /* background-color: blue; */
 
    
 }

@@ -10,7 +10,7 @@ import right from '../../images/rightgroup.png'
 import left from '../../images/leftgroup.svg'
 
 
-const Login = (props) => {
+const ResetPassword = (props) => {
     const navigate = useNavigate()
     const [isValid, setIsValid] = useState(false);
     const [isLoading, setIsloading] = useState(false)
@@ -51,14 +51,6 @@ const Login = (props) => {
                 // setProgress(2)
                 
             }
-                
-        
-        //  return (
-        //      setProgress(1)
-        // //     e.target.name === 'email' ? setemail(e.target.value) :
-        // //         e.target.name === 'password' ? setPassword(e.target.value) :
-        // //             () => { }
-        // )
     }
     
 }
@@ -78,23 +70,15 @@ const Login = (props) => {
                 </div>
                 <div></div>
                 <div className='form'>
-                    <h1>Log in</h1>
-                    <p>Access your resource edge account</p>
-                    <div id={progress === 0 ? "hidemail": "displaydetail"}>
-                        <p>Supposed Fullname</p>
-                        <sm >{email}</sm>
-                    </div>
+                    <h1 id='resetp'>Reset Password</h1>
+                    <p id='resetpp'>To enable us reset your password, enter your email below</p>
                     <form onSubmit={handleClick}>
-                        <label id={progress === 0 ? null: "hidemail"}>Email Address:</label>
-                        <input id={progress === 0 ? "email" : "hidemail"} type="email" onChange={handleChange} name="email" placeholder='Enter email'/>
-                        <label id={progress === 0 ? "hidepassword": progress === 1 ? null:null}>Password:</label>
-                        <input id={progress === 0 ? "hidepassword": progress === 1 ? "password":null} onChange={handleChange}  type="password" name="password" placeholder='Enter password'/>
-                        { isValid ? <button  id='submit' type="submit"> {isLoading?'Loading': 'Sign in'}</button> :
-                        <button  id='submit' disabled type="submit"></button>}
-                        
+                        <label>Email Address:</label>
+                        <input id="email" type="email" onChange={handleChange} name="email" placeholder='Enter email'/>
+                        <button  id='submit' type="submit">{isLoading?'Loading': 'Sign in'}</button>
                     </form>
                     <div className='forgotpassword'>
-                        <Link to='/resetpassword'>Forgot password?</Link>
+                        <Link to='/login'>Back to login</Link>
                     </div>
                     
                 </div>
@@ -118,4 +102,4 @@ const mapDispatchToProps = {
     loginAction: LoginAction
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(ResetPassword);
