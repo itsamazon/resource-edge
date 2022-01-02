@@ -18,7 +18,6 @@ const Login = (props) => {
     const [password, setPassword] = useState('')
     const [progress, setProgress] = useState(0)
     const login = (email, password) => {
-        console.log("login function fired")
         setIsloading(true);
         let payload = { email: email.toUpperCase(), password: password }
         props.loginAction(payload).then(result => {
@@ -35,7 +34,6 @@ const Login = (props) => {
             const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
             const test = regex.test(e.target.value)
             if(regex.test(e.target.value)){
-                console.log('pass')
                 setemail(e.target.value);
                 setProgress(1)            
             }
@@ -51,6 +49,14 @@ const Login = (props) => {
                 // setProgress(2)
                 
             }
+                
+        
+        //  return (
+        //      setProgress(1)
+        // //     e.target.name === 'email' ? setemail(e.target.value) :
+        // //         e.target.name === 'password' ? setPassword(e.target.value) :
+        // //             () => { }
+        // )
     }
     
 }
@@ -73,12 +79,12 @@ const Login = (props) => {
                     <h1>Log in</h1>
                     <p>Access your resource edge account</p>
                     <div id={progress === 0 ? "hidemail": "displaydetail"}>
-                        <p>Supposed Fullname</p>
+                        <p>Ositadinma Nwangwu</p>
                         <sm >{email}</sm>
                     </div>
                     <form onSubmit={handleClick}>
                         <label id={progress === 0 ? null: "hidemail"}>Email Address:</label>
-                        <input id={progress === 0 ? "email" : "hidemail"} type="email" onChange={handleChange} name="email" placeholder='Enter email'/>
+                        <input id={progress === 0 ? "email" : "hidemail"} type="email" onBlur={handleChange} name="email" placeholder='Enter email'/>
                         <label id={progress === 0 ? "hidepassword": progress === 1 ? null:null}>Password:</label>
                         <input id={progress === 0 ? "hidepassword": progress === 1 ? "password":null} onChange={handleChange}  type="password" name="password" placeholder='Enter password'/>
                         { isValid ? <button  id='submit' type="submit"> {isLoading?'Loading': 'Sign in'}</button> :

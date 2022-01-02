@@ -1,12 +1,14 @@
 import './styles.css'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import menu from '../../images/menu-outline.png'
-import res from '../../images/res.png'
+import res from '../../images/whitres.png'
 import tm from '../../images/TM Dashboard.svg'
 import profile from '../../images/picon.svg'
 import talent from '../../images/Talent Manager.svg'
 import employ from '../../images/Employee.svg'
 import check from '../../images/check.svg'
+
 
 const Dashboard = () => {
   
@@ -88,7 +90,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className='logout'>
-                    <li><a>Logout</a></li>
+                    <Link to='/' id='linked'>Logout</Link>
                 </div>
         </div>
 

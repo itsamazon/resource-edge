@@ -6,7 +6,7 @@ const ConfigureStore = () => {
     let preloadedState
     const persistedTodoString = localStorage.getItem('email')
     if(persistedTodoString != null){
-        console.log(persistedTodoString)
+        // console.log(persistedTodoString)
         preloadedState ={
             login:{email:JSON.parse(persistedTodoString)}
         }

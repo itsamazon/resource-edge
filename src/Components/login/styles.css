@@ -101,7 +101,7 @@
     font-size: 19px;
 
 }
-#email,#password{
+#email,#password,#emaile{
     padding-left: 10px;
     font-size: 14px;
     color: #091E42
@@ -155,5 +155,16 @@
 #check_circle{
     margin-left: 35%;
 }
+
+#error{
+    color: red;
+    margin-left: -1px;
+    margin-bottom:0px;
+}
+
+#emaile{
+   border: 1px solid red;
+}
+
 
 

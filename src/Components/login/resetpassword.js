@@ -18,34 +18,29 @@ const ResetPassword = (props) => {
     const [email, setemail] = useState('')
     const [password, setPassword] = useState('')
     const [progress, setProgress] = useState(0)
+
     const login = (email, password) => {
-        console.log("login function fired")
         setIsloading(true);
         let payload = { email: email.toUpperCase(), password: password }
         props.loginAction(payload).then(result => {
-            // console.log(props)
             if (result.success) {
                 setIsloading(false);
-                navigate("/dashboard")
+                navigate("/recoveryemail")
             }
         })
     }
     const handleChange = (e) => {
         if(e.target.type === 'email'){
-            if(e.target.value.trim()){
-                if(e.target.value != ''){
-                    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
-                    const test = regex.test(e.target.value)
-                    if(regex.test(e.target.value)){
-                        console.log('pass')
-                        setemail(e.target.value);
-                        // setProgress(1)            
-                    }
-                }else {
-                    seterror('Enter email address')
+            if(e.target.value != ''){
+                const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
+                const test = regex.test(e.target.value)
+                if(regex.test(e.target.value)){
+                    setemail(e.target.value);
+                    login(email)            
                 }
-            }
-           
+            }else {
+                seterror('* Enter email address')
+            }           
         } else {
 
             //check length of password
@@ -65,11 +60,10 @@ const ResetPassword = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        if({error} != ''){
-
-        }
-        else
-        {login(email, password);}
+        // if({error} == ''){
+        //     login(email, password);
+        // }
+        
     }
     return(
         <div className='login'>
@@ -84,8 +78,8 @@ const ResetPassword = (props) => {
                     <p id='resetpp'>To enable us reset your password, enter your email below</p>
                     <form onSubmit={handleClick}>
                         <label>Email Address:</label>
-                        <input id="email" type="email" onChange={handleChange} name="email" placeholder='Enter email'/>
-                        { error ? <p>{error} </p> : null}
+                        <input id={error? "emaile":"email" }type="email" onBlur={handleChange} name="email" placeholder='Enter email'/>
+                        { error && <p id ='error'>{error} </p>}
                         <button  id='submit' type="submit">{isLoading?'Loading': 'Sign in'}</button>
                     </form>
                     <div className='forgotpassword'>

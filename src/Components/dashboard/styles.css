@@ -121,11 +121,9 @@ nav{
 
 }
 #res{
-    color:  #42526E;
     padding:7px 15px ;
     font-weight: 700;
     font-size: 12px;
-    background-color: rgba(9, 30, 66, 0.04);;
     ;
 
 }
@@ -204,6 +202,10 @@ nav{
 .logout{
     padding:20px 0 20px 16px;
     border-top: 2px solid #C1C7D0;
+    color: #172B4D;
+}
+
+#linked:visited {
     color: #172B4D;
 }
 
