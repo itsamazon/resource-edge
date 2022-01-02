@@ -17,7 +17,6 @@ nav {
 }
 
 .navbar ul {
-    width: 100%;
     align-items: center;
    
 }
@@ -50,6 +49,7 @@ nav {
     margin:0 20px 0 100px;
     align-items: center;
     overflow: hidden;
+    
 }
 
 nav button {
@@ -69,9 +69,9 @@ nav button {
     /* box-shadow: 3px 1px whitesmoke; */
 }
 .btn{
-    margin-left: auto;
+    margin-left:auto;
     display: flex;
-    margin-right: 2%;
+    justify-content: end;
 }
 .btn Link{
     padding: 5px 12px;
@@ -104,7 +104,18 @@ nav button {
 .closebtn{
     display: none;
 }
+
+.checked{
+    width: 30%;
+}
+
+ul{
+    width: 20px;
+}
 @media screen and (max-width: 600px)  {
+    .checked{
+        display: none;
+    }
     .navbar{
         flex-direction: column;
         padding: 5px 0.6rem;

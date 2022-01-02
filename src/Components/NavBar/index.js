@@ -20,7 +20,17 @@ const NavBar = () => {
             <img src={res} id='wlogo' />
             <img src={re} id='mlogo' />
         </div>
-       {isOpen && <>
+
+        <ul className='checked'>
+        <li><a href=''>Features</a></li>
+        <li><a href=''>About</a></li>
+        </ul>
+        <div className='btn checked'>
+            <button id='signup'>Sign up</button>
+            <button id='signin'>Sign in</button>
+        </div>
+
+        {isOpen && <>
             <ul className='myul'>
                 <li><a href=''>Features</a></li>
                 <li><a href=''>About</a></li>

@@ -44,7 +44,13 @@ const Dashboard = () => {
         } else {
           drp.style.display = "none";
         }
-      }
+    }
+
+    const blurred =() => {
+        let drp = document.getElementById("drpcnt");
+        drp.style.display="none"
+
+    }
 
     return(
         <div>
@@ -61,8 +67,8 @@ const Dashboard = () => {
             </nav>
 
             
-            <div className='dropdown' id ='drpcnt'>
-                <div className='dropdown-content'>
+            <div className='dropdown' id ='drpcnt' onBlur={blurred}>
+                <div className='dropdown-content' >
                     <h1>OSITADINMA NWANGWU</h1>
                     <p>Profile</p>
                     <sm id='sm'>Use Resource Edge as </sm>
