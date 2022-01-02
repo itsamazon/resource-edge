@@ -13,7 +13,7 @@ const LandingPage = () => {
             <Intro /> 
             <Hr />
             <AdminL />
-            <Footer/>
+            <Footer />
         </div>
     )
 }

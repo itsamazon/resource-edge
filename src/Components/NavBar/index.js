@@ -26,8 +26,8 @@ const NavBar = () => {
         <li><a href=''>About</a></li>
         </ul>
         <div className='btn checked'>
-            <button id='signup'>Sign up</button>
-            <button id='signin'>Sign in</button>
+            <Link to="/signup" id='signup'>Sign Up</Link>
+            <Link to="/login" id='signin' >Sign In</Link>
         </div>
 
         {isOpen && <>
