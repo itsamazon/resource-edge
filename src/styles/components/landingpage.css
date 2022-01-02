@@ -1,18 +1,14 @@
 @import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
 
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: circular std;
-}
 
 .land{
-    position: absolute;
+    /* position: relative; */
+   
     
 }
 
 @media screen and (max-width:600px){
+    .land{
+        width: 100%;
+    }
 }

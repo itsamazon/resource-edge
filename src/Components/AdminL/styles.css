@@ -1,6 +1,7 @@
 .admin{
     width: 100%;
     padding: 4rem 0 4rem 8rem;
+    /* border: 1px solid pink; */
    
 }
 .addtext{
@@ -8,19 +9,14 @@
 }
 .addL{ 
     width: 541px;
-    height: 211px;
+    
     /* background-color: red; */
 }
 
 .addL h1{
-    position: static;
     width: 516.74px;
-    height: 65px;
-    left: 0px;
-        top: 2.02px;
     font-weight: bold;
     font-size: 48px;
-    line-height: 135%;
     color: #091E42;
     transform: rotate(-0.22deg);
     flex: none;
@@ -30,23 +26,15 @@
 }
 
 .addL p{
-    position: static;
     width: 430px;
-    height: 48px;
-    left: 0px;
-    top: 99.02px;
     font-weight: 450;
     font-size: 16px;
-    line-height: 24px;
     color: #5E6C84;
     flex: none;
     order: 1;
     flex-grow: 0;
     margin: 32px 0px;
 }
-/* .travel{
-    background-color: pink;
-} */
 
 #trvl,#assts {
 width: 64px;
@@ -153,3 +141,56 @@ margin-bottom: 32px;
     opacity: 0.7;
 
 }
+
+@media screen and (max-width:640px){
+   
+    .admin{
+        padding: 4rem 1rem 4rem 1rem;
+    }
+    .addL,.addL h1,.addL p,#addy,.sponsors{
+        width: 100%;
+    }
+    .addL h1{
+        font-size: 24px;
+        margin: 0px;
+    }
+    
+    .addtext{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .travel,.assets{
+        margin-left: 40px;
+        height: 218px;
+        margin-bottom: 32px;
+    }
+    .travel p,.assets p{
+        margin: 0;
+        width: 100%;
+    } 
+
+    #addy{
+        margin: 0;
+        height: 201px;
+        box-shadow: -14px 10px 20px rgba(9, 30, 66, 0.08);
+        margin-bottom: 89px;
+      
+    }
+    
+    .finance{
+        margin-top: 78px;
+    }
+
+    .sponsors{
+        width: 100%;
+        display: block;
+        
+    }
+    .sponsors img{
+        width: 40%;
+        margin: 0 10px ;
+    }
+}
+    

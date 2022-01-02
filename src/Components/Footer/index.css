@@ -4,19 +4,17 @@
     flex-direction: row;
     justify-content: space-between;
     background: #091E42;
-
+    width: 100%;
 }
 
 .foottext h1{
     height: 23px;
-    width: 143px;
-    font-size: 16px;
+    font-size: 42px;
     font-weight: 700;
-    color: red;
+    color: #F4F5F7;  
 }
 
 .foottext p{
-    width: 276px;
     height: 26px;
     font-weight: 450;
     font-size: 18px;
@@ -26,4 +24,54 @@
     order: 1;
     flex-grow: 0;
     margin: 4px 0px;
+  
+}
+
+.socials{
+    /* border: 1px solid red; */
+    margin-right: 10%;
+}
+
+.socials a{
+    position: relative;
+    left: 45%;
+    margin-left: 20px;
+}
+
+.foottext img{
+    width: 164px;
+    margin-left: 15%;
+}
+
+.socials p{
+    color: #FFFFFF;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:640px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socials{
+        margin-top: 68px;
+        align-items: center;
+    }
+
+    .socials a{
+        left: 1%;
+    }
+
+    .socials a img{
+        padding-bottom: 50px;
+    }
+
+    .socials p{
+        text-align: center;
+        font-size: 13px;
+        width: 185px;
+    }
 }

@@ -51,14 +51,6 @@ const Login = (props) => {
                 // setProgress(2)
                 
             }
-                
-        
-        //  return (
-        //      setProgress(1)
-        // //     e.target.name === 'email' ? setemail(e.target.value) :
-        // //         e.target.name === 'password' ? setPassword(e.target.value) :
-        // //             () => { }
-        // )
     }
     
 }

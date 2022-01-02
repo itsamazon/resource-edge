@@ -34,7 +34,7 @@ const AdminL = () => {
             <img id='addy' src={adl} />
 
             <div className='addtext second'>
-                <section className='addL'>
+                <section className='addL finance'>
                     <h1>Finance</h1>
                     <p>Generate invoices, track expenditure, and manage complex payrolls for multiple teams and companies</p>
                 </section>
@@ -53,9 +53,9 @@ const AdminL = () => {
             <img id ='addy' src ={payroll}/>
             <div className='sponsors'>
                 <img src={unn} />
-                <img src={tenne} />
-                <img src={priv} />
                 <img src={gene} />
+                <img src={priv} />
+                <img src={tenne} />
             </div>
         </div>
     )

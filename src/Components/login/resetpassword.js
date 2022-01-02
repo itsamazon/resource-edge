@@ -13,6 +13,7 @@ import left from '../../images/leftgroup.svg'
 const ResetPassword = (props) => {
     const navigate = useNavigate()
     const [isValid, setIsValid] = useState(false);
+    const [error,seterror] = useState('')
     const [isLoading, setIsloading] = useState(false)
     const [email, setemail] = useState('')
     const [password, setPassword] = useState('')
@@ -31,15 +32,20 @@ const ResetPassword = (props) => {
     }
     const handleChange = (e) => {
         if(e.target.type === 'email'){
-            // console.log('hello')
-            const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
-            const test = regex.test(e.target.value)
-            if(regex.test(e.target.value)){
-                console.log('pass')
-                setemail(e.target.value);
-                setProgress(1)            
+            if(e.target.value.trim()){
+                if(e.target.value != ''){
+                    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/
+                    const test = regex.test(e.target.value)
+                    if(regex.test(e.target.value)){
+                        console.log('pass')
+                        setemail(e.target.value);
+                        // setProgress(1)            
+                    }
+                }else {
+                    seterror('Enter email address')
+                }
             }
-            ;
+           
         } else {
 
             //check length of password
@@ -59,7 +65,11 @@ const ResetPassword = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        login(email, password);
+        if({error} != ''){
+
+        }
+        else
+        {login(email, password);}
     }
     return(
         <div className='login'>
@@ -75,6 +85,7 @@ const ResetPassword = (props) => {
                     <form onSubmit={handleClick}>
                         <label>Email Address:</label>
                         <input id="email" type="email" onChange={handleChange} name="email" placeholder='Enter email'/>
+                        { error ? <p>{error} </p> : null}
                         <button  id='submit' type="submit">{isLoading?'Loading': 'Sign in'}</button>
                     </form>
                     <div className='forgotpassword'>
